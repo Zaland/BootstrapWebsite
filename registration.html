@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> BootStrap Test </title>
+	<meta name="viewport" content="width="device-width", initial-scale="1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+<!-- ==================== Navbar ==================== -->
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    <div class="container">
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			    <span class="sr-only"> Toggle navigation </span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" href="index.html"> Project Name </a>
+	        <div class="navbar-collapse collapse">		    
+			    <ul class="nav navbar-nav navbar-right">
+			    	<li><a href="index.html"> <span class="glyphicon glyphicon-home"></span> Home </a></li>
+			    	<li><a href="services.html"> <span class="glyphicon glyphicon-usd"></span> Services </a></li>
+					<li><a href="curriculum.html"> <span class="glyphicon glyphicon-list-alt"></span> Curriculum </a></li>
+					<li class="active"><a href="registration.html"> <span class="glyphicon glyphicon-edit"></span> Registration </a></li>
+					<li><a href="links.html"> <span class="glyphicon glyphicon-link"></span> Links </a></li>
+			        <li><a href="aboutus.html"> <span class="glyphicon glyphicon-user"></span> About Us </a></li>
+					<li><a href="contactus.html"> <span class="glyphicon glyphicon-phone"></span> Contact Us </a></li>
+		        </ul>
+			</div>
+	    </div>
+	</nav>
+
+
+<!-- ==================== Header =================== -->
+
+	<div class="jumbotron" style="padding-top:100px" style="background-color:#ff3600;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-lg-2">
+                	<!-- <a href="#" class="thumbnail"> -->
+                		<img src="K6.png" alt="Error" width="100" height"100">    
+                </div>
+                <div class="col-sm-10 col-lg-10">
+                    <h1> Registration </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- ==================== Form ==================== -->
+
+	<div class="container">
+        <div class="col-lg-8 col-md-8 col-sm-8" id="divMain">
+		    <h1 style="padding-top:30px">Application Form</h1>
+		    <h3 style="color:#FF6633;"><?php echo $_GET[msg];?></h3>
+		    <hr>
+	        
+	        <div class="well well-md">                                   
+			    <form name="enq" method="post" action="emailRegister/" onsubmit="return validation();">
+				    <fieldset>  
+				    	<div class="form-group">
+				    		<label> Choose one of the following choices: </label>
+					    	<div class="radio">
+					    		<label>
+					    			<input type="radio" name="optionsRadio" id="optionsRadios1" value="option1" checked> Option 1
+					    		</label>
+					    	</div>
+					    	<div class="radio">
+					    		<label>
+					    			<input type="radio" name="optionsRadio" id="optionsRadios2" value="option2"> Option 2
+					    		</label>
+					    	</div>
+						</div>
+
+				    	<div class="form-group" style="padding-top:20px">  
+					    	<label for="name"> First Name </label>
+					    	<input type="text" name="name" id="name" value=""  class="form-control" placeholder="Enter Name" required="required">
+					    </div>
+
+					    <div class="form-group" style="padding-top:20px">
+					    	<label for="age"> Date of Birth (DD/MM/YYYY) </label>
+					    	<input type="text" name="age" id="age" value="" class="form-control" placeholder="Enter Date of Birth" required="required">
+					    </div>
+
+					    <div class="form-group" style="padding-top:20px">
+					    	<label for="address"> Street Address </label>
+					    	<input type="text" name="address" id="address" value="" class="form-control" placeholder="Enter Street Address" required="required">
+					    </div>
+
+					    <div class="form-group" style="padding-top:20px">
+					    	<label for="email"> Email Address </label>
+					    	<input type="text" name="email" id="email" value="" class="form-control" placeholder="Enter Email">
+					    </div>
+
+					    <div class="form-group">
+					    	<label for="message"> Message </label>
+					    	<textarea rows="10" name="message" id="message" class="form-control" placeholder="Comments"></textarea>
+					    </div>
+
+					    <div class="actions">
+					    	<input type="submit" value="Send Your Message" name="submit" id="submitButton" class="btn btn-info pull    -right" title="Click here to submit your message!" />
+					    </div>	
+				    </fieldset>
+			    </form> 
+		    </div> 				 										 
+		</div>
+	</div>
+
+	<div class="container"> <div class="page-header"> </div> </div>
+
+	<!-- Necessary for JavaScript -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
